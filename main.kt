@@ -184,7 +184,7 @@ class AttendanceTracker(private val empManager: EmployeeManager) : AttendanceRep
             val duration = Duration.between(rec.checkIn, rec.checkOut)
             val hours = duration.toHours()
             val minutes = duration.toMinutes() % 60
-            println("👤 ${emp?.firstName} ${emp?.lastName} |  ${hours}h ${minutes}m |  In: ${rec.checkIn.format(formatter)} | Out: ${rec.checkOut?.format(formatter)}")
+            println("${emp?.firstName} ${emp?.lastName} |  ${hours}h ${minutes}m |  In: ${rec.checkIn.format(formatter)} | Out: ${rec.checkOut?.format(formatter)}")
         }
     }
 }
